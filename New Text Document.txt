@@ -1,0 +1,60 @@
+Backend
+uvicorn backend.main:app --reload --port 8000
+
+Frontend
+cd frontend
+npm run dev
+
+1-
+الأدمن (Admin):
+اليوزر: admin
+الباسورد: admin123
+يقدر يدخل على الـ Dashboard، يضيف سواقين، ويشوف كل الداتا.
+السائق (User/Driver):
+اليوزر: رقمه القومي (National ID).
+الباسورد: رقمه القومي (National ID) برضه (كـ Default).
+لما يسجل دخول، الموقع بيوجهه لصفحة My Profile، وهناك بيشوف بياناته هو بس + الملصق الالكتروني بتاعه. مبيقدرش يشوف بيانات حد تاني.
+
+2-
+السائق (User/Driver):
+اليوزر: رقمه القومي (National ID).
+الباسورد: رقمه القومي (National ID) برضه (كـ Default).
+لما يسجل دخول، الموقع بيوجهه لصفحة My Profile، وهناك بيشوف بياناته هو بس + الملصق الالكتروني بتاعه. مبيقدرش يشوف بيانات حد تاني.
+
+
+
+http://localhost:5173/
+http://127.0.0.1:8000/
+
+
+
+
+in localhost
+============
+Step 1: Start the Backend
+
+cd backend
+uvicorn main:app --reload
+
+
+Step 2: Start the Frontend
+cd frontend
+npm run dev
+
+
+
+
+
+
+
+in network
+============
+
+Step 1: Start the Backend
+
+cd Web/backend
+uvicorn main:app --reload --host 0.0.0.0
+
+Step 2: Start the Frontend
+cd Web/frontend
+npm run dev
