@@ -1,5 +1,5 @@
-// Dynamic API URL that works for localhost and network IP
-const API_URL = `http://${window.location.hostname}:8000`;
+// Use environment variable for production, fallback to dynamic localhost for dev
+const API_URL = import.meta.env.VITE_API_URL || `http://${window.location.hostname}:8000`;
 
 export const getDrivers = async () => {
     const response = await fetch(`${API_URL}/drivers/`);
